@@ -12,6 +12,14 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <section className="w-full">
+          <iframe
+            src="https://ancoradistribuidora.egestor.com.br/vitrine/"
+            title="Vitrine Ancora Distribuidora"
+            className="w-full border-none"
+            style={{ height: "800px" }}
+          />
+        </section>
         <About />
         <Products />
         <Contact />
