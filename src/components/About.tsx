@@ -4,15 +4,14 @@ import aboutBg from "@/assets/about-bg.jpg";
 const About = () => {
   return (
     <section id="sobre" className="relative overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={aboutBg}
-          alt="Material escolar e papelaria coloridos"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-background/92" />
-      </div>
+      {/* Background image with parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${aboutBg})` }}
+        role="img"
+        aria-label="Material escolar e papelaria coloridos"
+      />
+      <div className="absolute inset-0 bg-background/92" />
 
       <div className="relative z-10 section-padding">
         <div className="container mx-auto">
