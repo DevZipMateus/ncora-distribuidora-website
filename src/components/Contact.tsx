@@ -9,14 +9,14 @@ const Contact = () => {
         <img
           src={contactBg}
           alt="Prateleiras com artigos de papelaria e bazar"
-          className="w-full h-full object-cover"
-        />
+          className="w-full h-full object-cover" />
+
         <div className="absolute inset-0 bg-background/93" />
       </div>
 
       <div className="relative z-10 section-padding">
         <div className="container mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary text-center mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-primary-foreground">
             Entre em contato
           </h2>
           <div className="w-16 h-1 bg-accent mx-auto mb-12 rounded-full" />
@@ -42,8 +42,8 @@ const Contact = () => {
                 href="https://wa.me/5549999739747"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground text-sm hover:text-accent transition-colors"
-              >
+                className="text-muted-foreground text-sm hover:text-accent transition-colors">
+
                 (49) 99973-9747
               </a>
             </div>
@@ -55,8 +55,8 @@ const Contact = () => {
               <h3 className="font-display text-lg font-bold text-primary mb-2">E-mail</h3>
               <a
                 href="mailto:comercialancoradistribuidora@gmail.com"
-                className="text-muted-foreground text-sm hover:text-accent transition-colors break-all"
-              >
+                className="text-muted-foreground text-sm hover:text-accent transition-colors break-all">
+
                 comercialancoradistribuidora@gmail.com
               </a>
             </div>
@@ -81,8 +81,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Contact;
