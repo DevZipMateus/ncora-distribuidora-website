@@ -23,6 +23,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setIsOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   const handleClick = (href: string) => {
     setIsOpen(false);
     if (href.startsWith("/")) {
@@ -43,21 +52,21 @@ const Header = () => {
           : "bg-background/80 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
-        <a href="/" className="flex items-center gap-3" onClick={(e) => { e.preventDefault(); handleClick("#inicio"); }}>
-          <img src={logo} alt="Logo Ancora Distribuidora" className="h-12 w-12 object-contain" />
-          <span className="font-display text-lg font-bold text-primary hidden sm:block">
+      <div className="container mx-auto flex items-center justify-between py-2 sm:py-3 px-4 md:px-6 lg:px-8">
+        <a href="/" className="flex items-center gap-2 sm:gap-3" onClick={(e) => { e.preventDefault(); handleClick("#inicio"); }}>
+          <img src={logo} alt="Logo Ancora Distribuidora" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
+          <span className="font-display text-base sm:text-lg font-bold text-primary hidden sm:block">
             Ancora Distribuidora
           </span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Navegação principal">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className="text-foreground/80 hover:text-accent font-medium transition-colors text-sm tracking-wide"
+              className="text-foreground/80 hover:text-accent font-medium transition-colors text-sm tracking-wide whitespace-nowrap"
             >
               {link.label}
             </button>
@@ -66,7 +75,7 @@ const Header = () => {
             href="https://wa.me/5549999739747"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
+            className="bg-accent text-accent-foreground px-4 lg:px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap"
           >
             Fale conosco
           </a>
@@ -84,12 +93,12 @@ const Header = () => {
 
       {/* Mobile nav */}
       {isOpen && (
-        <nav className="md:hidden bg-background border-t border-border px-4 pb-4" aria-label="Navegação mobile">
+        <nav className="md:hidden bg-background border-t border-border px-4 pb-4 max-h-[70vh] overflow-y-auto" aria-label="Navegação mobile">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className="block w-full text-left py-3 text-foreground/80 hover:text-accent font-medium transition-colors border-b border-border/50"
+              className="block w-full text-left py-3 text-foreground/80 hover:text-accent font-medium transition-colors border-b border-border/50 text-base"
             >
               {link.label}
             </button>
