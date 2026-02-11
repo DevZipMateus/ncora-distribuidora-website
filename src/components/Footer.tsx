@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary py-10 px-4">
       <div className="container mx-auto text-center">
-        <img src={logo} alt="Logo Ancora Distribuidora" className="h-14 w-14 object-contain mx-auto mb-4" />
+        <img src={logo} alt="Logo Ancora Distribuidora" className="h-14 w-14 object-contain mx-auto mb-4 brightness-0 invert" />
         <p className="text-primary-foreground/70 text-sm mb-2">
           Ancora Distribuidora © {new Date().getFullYear()} — Todos os direitos reservados.
         </p>
