@@ -54,7 +54,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-2 sm:py-3 px-4 md:px-6 lg:px-8">
         <a href="/" className="flex items-center gap-2 sm:gap-3" onClick={(e) => { e.preventDefault(); handleClick("#inicio"); }}>
-          <img src={logo} alt="Logo Ancora Distribuidora" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
+          <img src={logo} alt="Logo Ancora Distribuidora" className="h-14 w-14 sm:h-16 sm:w-16 object-contain" />
           <span className="font-display text-base sm:text-lg font-bold text-primary hidden sm:block">
             Ancora Distribuidora
           </span>
