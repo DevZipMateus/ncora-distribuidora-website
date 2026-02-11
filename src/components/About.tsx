@@ -22,7 +22,7 @@ const About = () => {
           <div className="w-16 h-1 bg-accent mx-auto mb-12 rounded-full" />
 
           {/* History */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16 bg-background/75 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-sm">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Somos um atacado de material escolar, papelaria, artigos para escritório e bazar, oferecendo soluções completas para lojistas e empresas que buscam qualidade, variedade e confiança.
             </p>
