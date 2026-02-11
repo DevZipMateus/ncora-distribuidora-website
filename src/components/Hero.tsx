@@ -6,15 +6,14 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-[85vh] flex items-center justify-center overflow-hidden"
     >
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Depósito de materiais escolares e papelaria da Ancora Distribuidora"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-primary/80" />
-      </div>
+      {/* Background image with parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="Depósito de materiais escolares e papelaria da Ancora Distribuidora"
+      />
+      <div className="absolute inset-0 bg-primary/80" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">

@@ -4,15 +4,14 @@ import contactBg from "@/assets/contact-bg.jpg";
 const Contact = () => {
   return (
     <section id="contato" className="relative overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={contactBg}
-          alt="Prateleiras com artigos de papelaria e bazar"
-          className="w-full h-full object-cover" />
-
-        <div className="absolute inset-0 bg-background/93" />
-      </div>
+      {/* Background image with parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${contactBg})` }}
+        role="img"
+        aria-label="Prateleiras com artigos de papelaria e bazar"
+      />
+      <div className="absolute inset-0 bg-background/93" />
 
       <div className="relative z-10 section-padding">
         <div className="container mx-auto">
