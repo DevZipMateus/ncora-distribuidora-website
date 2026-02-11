@@ -1,4 +1,5 @@
 import { BookOpen, Pen, Briefcase, Gift } from "lucide-react";
+import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -23,47 +24,95 @@ const categories = [
   },
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.12, ease: [0, 0, 0.58, 1] as const },
+  }),
+};
+
 const Products = () => {
   return (
     <section id="produtos" className="section-padding bg-primary">
       <div className="container mx-auto">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-4">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          custom={0}
+          variants={fadeInUp}
+          className="font-display text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-4"
+        >
           Nossos produtos
-        </h2>
-        <div className="w-16 h-1 bg-accent mx-auto mb-6 rounded-full" />
-        <p className="text-primary-foreground/70 text-center max-w-2xl mx-auto mb-12 text-lg">
+        </motion.h2>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="w-16 h-1 bg-accent mx-auto mb-6 rounded-full origin-center"
+        />
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          custom={1}
+          variants={fadeInUp}
+          className="text-primary-foreground/70 text-center max-w-2xl mx-auto mb-12 text-lg"
+        >
           Trabalhamos com as melhores marcas do mercado, oferecendo variedade e preços competitivos para o seu negócio.
-        </p>
+        </motion.p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((cat) => (
-            <div
+          {categories.map((cat, i) => (
+            <motion.div
               key={cat.title}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              custom={i}
+              variants={fadeInUp}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-2xl p-8 text-center hover:bg-primary-foreground/15 transition-colors group"
             >
-              <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors">
+              <motion.div
+                whileHover={{ scale: 1.15, rotate: 10 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/30 transition-colors"
+              >
                 <cat.icon className="w-8 h-8 text-accent" />
-              </div>
+              </motion.div>
               <h3 className="font-display text-lg font-bold text-primary-foreground mb-3">
                 {cat.title}
               </h3>
               <p className="text-primary-foreground/70 text-sm leading-relaxed">
                 {cat.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={0}
+          variants={fadeInUp}
+          className="text-center mt-12"
+        >
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
             href="https://wa.me/5549999739747?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Ancora%20Distribuidora."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg"
+            className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition-shadow hover:shadow-xl"
           >
             Solicite nosso catálogo
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

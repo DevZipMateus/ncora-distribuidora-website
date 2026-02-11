@@ -1,10 +1,19 @@
 import { Target, Eye, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 import aboutBg from "@/assets/about-bg.jpg";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.15, ease: [0, 0, 0.58, 1] as const },
+  }),
+};
 
 const About = () => {
   return (
     <section id="sobre" className="relative overflow-hidden">
-      {/* Background image with parallax */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${aboutBg})` }}
@@ -15,13 +24,32 @@ const About = () => {
 
       <div className="relative z-10 section-padding">
         <div className="container mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary text-center mb-4">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            custom={0}
+            variants={fadeInUp}
+            className="font-display text-3xl md:text-4xl font-bold text-primary text-center mb-4"
+          >
             Sobre nós
-          </h2>
-          <div className="w-16 h-1 bg-accent mx-auto mb-12 rounded-full" />
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-16 h-1 bg-accent mx-auto mb-12 rounded-full origin-center"
+          />
 
-          {/* History */}
-          <div className="max-w-3xl mx-auto text-center mb-16 bg-background/75 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-sm">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            custom={1}
+            variants={fadeInUp}
+            className="max-w-3xl mx-auto text-center mb-16 bg-background/75 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-sm"
+          >
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Somos um atacado de material escolar, papelaria, artigos para escritório e bazar, oferecendo soluções completas para lojistas e empresas que buscam qualidade, variedade e confiança.
             </p>
@@ -31,39 +59,35 @@ const About = () => {
             <p className="text-muted-foreground text-lg leading-relaxed">
               Mais do que produtos, entregamos parceria. Trabalhamos com organização e agilidade, garantindo uma experiência de compra segura, prática e satisfatória — do pedido à entrega.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Mission, Vision, Values */}
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border/50">
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
-                <Target className="w-7 h-7 text-accent" />
-              </div>
-              <h3 className="font-display text-xl font-bold text-primary mb-3">Missão</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                Oferecer produtos de material escolar, papelaria, escritório e bazar com qualidade, variedade e preços competitivos, garantindo eficiência, organização e confiança em cada negociação.
-              </p>
-            </div>
-
-            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border/50">
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
-                <Eye className="w-7 h-7 text-accent" />
-              </div>
-              <h3 className="font-display text-xl font-bold text-primary mb-3">Visão</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                Ser referência regional no segmento de atacado, reconhecida pela credibilidade, crescimento sustentável e excelência nos processos.
-              </p>
-            </div>
-
-            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border/50">
-              <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5">
-                <Heart className="w-7 h-7 text-accent" />
-              </div>
-              <h3 className="font-display text-xl font-bold text-primary mb-3">Valores</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                Compromisso com clientes e parceiros, ética e transparência, organização e agilidade, qualidade nos produtos e serviços, respeito, responsabilidade e crescimento contínuo.
-              </p>
-            </div>
+            {[
+              { icon: Target, title: "Missão", desc: "Oferecer produtos de material escolar, papelaria, escritório e bazar com qualidade, variedade e preços competitivos, garantindo eficiência, organização e confiança em cada negociação." },
+              { icon: Eye, title: "Visão", desc: "Ser referência regional no segmento de atacado, reconhecida pela credibilidade, crescimento sustentável e excelência nos processos." },
+              { icon: Heart, title: "Valores", desc: "Compromisso com clientes e parceiros, ética e transparência, organização e agilidade, qualidade nos produtos e serviços, respeito, responsabilidade e crescimento contínuo." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                custom={i}
+                variants={fadeInUp}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border/50"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-5"
+                >
+                  <item.icon className="w-7 h-7 text-accent" />
+                </motion.div>
+                <h3 className="font-display text-xl font-bold text-primary mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
