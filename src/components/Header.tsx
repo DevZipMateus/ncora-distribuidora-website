@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Produtos", href: "#produtos" },
+  { label: "Vitrine", href: "/vitrine" },
   { label: "Contato", href: "#contato" },
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,8 +25,14 @@ const Header = () => {
 
   const handleClick = (href: string) => {
     setIsOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -34,7 +44,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
-        <a href="#inicio" className="flex items-center gap-3" onClick={() => handleClick("#inicio")}>
+        <a href="/" className="flex items-center gap-3" onClick={(e) => { e.preventDefault(); handleClick("#inicio"); }}>
           <img src={logo} alt="Logo Ancora Distribuidora" className="h-12 w-12 object-contain" />
           <span className="font-display text-lg font-bold text-primary hidden sm:block">
             Ancora Distribuidora
