@@ -46,7 +46,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary-foreground mb-4 sm:mb-6"
+          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl font-bold text-primary-foreground mb-4 sm:mb-6 3xl:mb-8"
         >
           Ancora Distribuidora
         </motion.h1>
@@ -54,7 +54,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary-foreground/90 font-light max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-3 sm:mb-4"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 3xl:text-4xl text-primary-foreground/90 font-light max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl 3xl:max-w-5xl mx-auto mb-3 sm:mb-4 3xl:mb-6"
         >
           Atacado de material escolar, papelaria, escritório e bazar para lojistas e empresas da Região Sul
         </motion.h2>
@@ -62,7 +62,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="text-primary-foreground/70 text-sm sm:text-base md:text-lg italic mb-8 sm:mb-10"
+          className="text-primary-foreground/70 text-sm sm:text-base md:text-lg 3xl:text-xl italic mb-8 sm:mb-10 3xl:mb-14"
         >
           Âncora. Onde os negócios se fortalecem.
         </motion.p>
@@ -78,7 +78,7 @@ const Hero = () => {
             href="https://wa.me/5549999739747"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg transition-shadow hover:shadow-xl text-center"
+            className="w-full sm:w-auto bg-accent text-accent-foreground px-6 sm:px-8 3xl:px-10 py-3 sm:py-4 3xl:py-5 rounded-lg font-semibold text-base sm:text-lg 3xl:text-xl shadow-lg transition-shadow hover:shadow-xl text-center"
           >
             Solicite um orçamento
           </motion.a>
@@ -86,7 +86,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" })}
-            className="w-full sm:w-auto border-2 border-primary-foreground/40 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-primary-foreground/10 transition-colors"
+            className="w-full sm:w-auto border-2 border-primary-foreground/40 text-primary-foreground px-6 sm:px-8 3xl:px-10 py-3 sm:py-4 3xl:py-5 rounded-lg font-semibold text-base sm:text-lg 3xl:text-xl hover:bg-primary-foreground/10 transition-colors"
           >
             Conheça a empresa
           </motion.button>

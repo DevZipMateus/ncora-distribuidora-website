@@ -72,7 +72,7 @@ const Contact = () => {
 
       <div className="absolute inset-0 bg-background/93" />
 
-      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24">
+      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 3xl:px-24 3xl:py-32">
         <div className="container mx-auto">
           <motion.h2
             initial="hidden"
@@ -80,7 +80,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.5 }}
             custom={0}
             variants={fadeInUp}
-            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4 text-gray-950 bg-white/[0.69]">
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl font-bold text-center mb-3 sm:mb-4 text-foreground bg-white/[0.69]">
 
             Entre em contato
           </motion.h2>
@@ -92,7 +92,7 @@ const Contact = () => {
             className="w-12 sm:w-16 h-1 bg-accent mx-auto mb-8 sm:mb-12 rounded-full origin-center" />
 
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 xl:gap-8 3xl:gap-10 max-w-5xl 3xl:max-w-6xl mx-auto">
             {contactItems.map((item, i) =>
             <motion.div
               key={item.title}
@@ -102,7 +102,7 @@ const Contact = () => {
               custom={i}
               variants={fadeInUp}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="text-center bg-card/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 border border-border/50 hover:shadow-lg transition-shadow">
+              className="text-center bg-card/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 3xl:p-8 border border-border/50 hover:shadow-lg transition-shadow">
 
                 <motion.div
                 whileHover={{ scale: 1.15 }}
@@ -111,7 +111,7 @@ const Contact = () => {
 
                   <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                 </motion.div>
-                <h3 className="font-display text-sm sm:text-base lg:text-lg font-bold text-primary mb-1 sm:mb-2">{item.title}</h3>
+                <h3 className="font-display text-sm sm:text-base lg:text-lg 3xl:text-xl font-bold text-primary mb-1 sm:mb-2">{item.title}</h3>
                 {item.content}
               </motion.div>
             )}
