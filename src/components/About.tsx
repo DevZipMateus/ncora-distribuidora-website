@@ -31,7 +31,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.5 }}
             custom={0}
             variants={fadeInUp}
-            className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 text-primary-foreground lg:text-6xl">
+            className="font-display text-2xl sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4 text-primary-foreground lg:text-6xl font-extrabold">
 
             Sobre nós
           </motion.h2>
