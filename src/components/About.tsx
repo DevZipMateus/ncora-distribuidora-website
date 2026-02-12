@@ -51,13 +51,13 @@ const About = () => {
             variants={fadeInUp}
             className="max-w-3xl mx-auto text-center mb-10 sm:mb-16 bg-background/75 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-12 shadow-sm">
 
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
               Somos um atacado de material escolar, papelaria, artigos para escritório e bazar, oferecendo soluções completas para lojistas e empresas que buscam qualidade, variedade e confiança.
             </p>
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
               Nossa empresa nasceu em Cordilheira Alta – SC, no interior da cidade, em um pequeno município onde surgiu o sonho de construir um negócio próprio e buscar evolução profissional. Com dedicação, trabalho e visão de crescimento, transformamos essa ideia em realidade.
             </p>
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
+            <p className="text-foreground text-sm sm:text-base md:text-lg leading-relaxed">
               Mais do que produtos, entregamos parceria. Trabalhamos com organização e agilidade, garantindo uma experiência de compra segura, prática e satisfatória — do pedido à entrega.
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ const About = () => {
                   <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
                 </motion.div>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm">{item.desc}</p>
+                <p className="text-foreground leading-relaxed text-xs sm:text-sm">{item.desc}</p>
               </motion.div>
             )}
           </div>
