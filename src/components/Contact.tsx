@@ -16,7 +16,7 @@ const contactItems = [
   icon: MapPin,
   title: "Endereço",
   content:
-  <p className="text-xs leading-relaxed text-gray-950 sm:text-base">
+  <p className="text-xs leading-relaxed text-foreground sm:text-sm lg:text-base">
         Campina do Gregório<br />
         Cordilheira Alta – SC
       </p>
@@ -30,8 +30,7 @@ const contactItems = [
     href="https://wa.me/5549999739747"
     target="_blank"
     rel="noopener noreferrer"
-    className="text-xs transition-colors text-gray-950 sm:text-base">
-
+    className="text-xs transition-colors text-foreground sm:text-sm lg:text-base">
         (49) 99973-9747
       </a>
 
@@ -42,8 +41,7 @@ const contactItems = [
   content:
   <a
     href="mailto:comercialancoradistribuidora@gmail.com"
-    className="text-xs transition-colors break-all text-gray-950 sm:text-base">
-
+    className="text-xs transition-colors break-all text-foreground sm:text-sm lg:text-base">
         comercialancoradistribuidora@gmail.com
       </a>
 
@@ -52,7 +50,7 @@ const contactItems = [
   icon: Clock,
   title: "Horário",
   content:
-  <p className="text-xs leading-relaxed text-gray-950 sm:text-base">
+  <p className="text-xs leading-relaxed text-foreground sm:text-sm lg:text-base">
         Segunda à sexta<br />
         08:00 às 12:00<br />
         13:30 às 18:00
@@ -80,7 +78,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.5 }}
             custom={0}
             variants={fadeInUp}
-            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4 text-primary-foreground">
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-3 sm:mb-4 text-primary-foreground">
 
             Entre em contato
           </motion.h2>

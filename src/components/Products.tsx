@@ -43,7 +43,7 @@ const Products = () => {
           viewport={{ once: true, amount: 0.5 }}
           custom={0}
           variants={fadeInUp}
-          className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground text-center mb-3 sm:mb-4"
+          className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground text-center mb-3 sm:mb-4"
         >
           Nossos produtos
         </motion.h2>
