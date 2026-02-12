@@ -125,7 +125,7 @@ const Contact = () => {
             variants={fadeInUp}
             className="text-center mt-6 sm:mt-8">
 
-            <p className="text-muted-foreground text-xs sm:text-sm">
+            <p className="text-xs text-slate-950 sm:text-base">
               CNPJ: 63.738.093/0001-76
             </p>
           </motion.div>
