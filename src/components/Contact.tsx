@@ -72,7 +72,7 @@ const Contact = () => {
 
       <div className="absolute inset-0 bg-background/93" />
 
-      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 bg-black/[0.63]">
+      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 bg-white/[0.49]">
         <div className="container mx-auto">
           <motion.h2
             initial="hidden"
