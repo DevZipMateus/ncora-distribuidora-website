@@ -23,7 +23,7 @@ const About = () => {
 
       <div className="absolute inset-0 bg-background/92" />
 
-      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24">
+      <div className="relative z-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 3xl:px-24 3xl:py-32">
         <div className="container mx-auto">
           <motion.h2
             initial="hidden"
@@ -31,7 +31,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.5 }}
             custom={0}
             variants={fadeInUp}
-            className="font-display sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4 lg:text-6xl font-extrabold text-gray-950 text-5xl">
+            className="font-display sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4 lg:text-6xl 3xl:text-7xl font-extrabold text-foreground text-5xl">
 
             Sobre nós
           </motion.h2>
@@ -49,20 +49,20 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             custom={1}
             variants={fadeInUp}
-            className="max-w-3xl mx-auto text-center mb-10 sm:mb-16 bg-background/75 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-12 shadow-sm">
+            className="max-w-3xl 3xl:max-w-4xl mx-auto text-center mb-10 sm:mb-16 bg-background/75 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-12 3xl:p-16 shadow-sm">
 
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg 3xl:text-xl leading-relaxed mb-4 sm:mb-6">
               Somos um atacado de material escolar, papelaria, artigos para escritório e bazar, oferecendo soluções completas para lojistas e empresas que buscam qualidade, variedade e confiança.
             </p>
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg 3xl:text-xl leading-relaxed mb-4 sm:mb-6">
               Nossa empresa nasceu em Cordilheira Alta – SC, no interior da cidade, em um pequeno município onde surgiu o sonho de construir um negócio próprio e buscar evolução profissional. Com dedicação, trabalho e visão de crescimento, transformamos essa ideia em realidade.
             </p>
-            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg 3xl:text-xl leading-relaxed">
               Mais do que produtos, entregamos parceria. Trabalhamos com organização e agilidade, garantindo uma experiência de compra segura, prática e satisfatória — do pedido à entrega.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 3xl:gap-12">
             {[
             { icon: Target, title: "Missão", desc: "Oferecer produtos de material escolar, papelaria, escritório e bazar com qualidade, variedade e preços competitivos, garantindo eficiência, organização e confiança em cada negociação." },
             { icon: Eye, title: "Visão", desc: "Ser referência regional no segmento de atacado, reconhecida pela credibilidade, crescimento sustentável e excelência nos processos." },
@@ -76,7 +76,7 @@ const About = () => {
               custom={i}
               variants={fadeInUp}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 text-center hover:shadow-lg transition-shadow border border-border/50 last:sm:col-span-2 last:md:col-span-1 last:sm:max-w-sm last:sm:mx-auto last:md:max-w-none">
+              className="bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 3xl:p-10 text-center hover:shadow-lg transition-shadow border border-border/50 last:sm:col-span-2 last:md:col-span-1 last:sm:max-w-sm last:sm:mx-auto last:md:max-w-none">
 
                 <motion.div
                 whileHover={{ rotate: 360 }}
@@ -85,8 +85,8 @@ const About = () => {
 
                   <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
                 </motion.div>
-                <h3 className="font-display text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm">{item.desc}</p>
+                <h3 className="font-display text-lg sm:text-xl 3xl:text-2xl font-bold text-primary mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm 3xl:text-base">{item.desc}</p>
               </motion.div>
             )}
           </div>
