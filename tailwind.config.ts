@@ -16,9 +16,6 @@ export default {
       sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
       display: ['"Playfair Display"', 'serif'],
     },
-    screens: {
-      '3xl': '1921px',
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",

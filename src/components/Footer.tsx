@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary py-8 sm:py-10 lg:py-14 3xl:py-20 px-4 3xl:px-24">
+    <footer className="bg-primary py-8 sm:py-10 lg:py-14 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-6 sm:gap-8">
           <img src={logo} alt="Logo Ancora Distribuidora" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain brightness-0 invert" />
 
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-8 text-primary-foreground/80 text-xs sm:text-sm 3xl:text-base">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-8 text-primary-foreground/80 text-xs sm:text-sm">
             <a href="tel:+5549999739747" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
               <Phone size={16} className="shrink-0" />
               <span>(49) 99973-9747</span>

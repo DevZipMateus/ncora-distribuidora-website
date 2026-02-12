@@ -35,7 +35,7 @@ const fadeInUp = {
 
 const Products = () => {
   return (
-    <section id="produtos" className="px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 3xl:px-24 3xl:py-32 bg-primary">
+    <section id="produtos" className="px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-16 lg:py-24 bg-primary">
       <div className="container mx-auto">
         <motion.h2
           initial="hidden"
@@ -43,7 +43,7 @@ const Products = () => {
           viewport={{ once: true, amount: 0.5 }}
           custom={0}
           variants={fadeInUp}
-          className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-7xl font-bold text-primary-foreground text-center mb-3 sm:mb-4"
+          className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground text-center mb-3 sm:mb-4"
         >
           Nossos produtos
         </motion.h2>
@@ -60,12 +60,12 @@ const Products = () => {
           viewport={{ once: true, amount: 0.5 }}
           custom={1}
           variants={fadeInUp}
-          className="text-primary-foreground/70 text-center max-w-xs sm:max-w-lg md:max-w-2xl 3xl:max-w-3xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base md:text-lg 3xl:text-xl"
+          className="text-primary-foreground/70 text-center max-w-xs sm:max-w-lg md:max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base md:text-lg"
         >
           Trabalhamos com as melhores marcas do mercado, oferecendo variedade e preços competitivos para o seu negócio.
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 3xl:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}
@@ -75,7 +75,7 @@ const Products = () => {
               custom={i}
               variants={fadeInUp}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 3xl:p-10 text-center hover:bg-primary-foreground/15 transition-colors group"
+              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center hover:bg-primary-foreground/15 transition-colors group"
             >
               <motion.div
                 whileHover={{ scale: 1.15, rotate: 10 }}
@@ -84,10 +84,10 @@ const Products = () => {
               >
                 <cat.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-accent" />
               </motion.div>
-              <h3 className="font-display text-sm sm:text-base lg:text-lg 3xl:text-xl font-bold text-primary-foreground mb-1 sm:mb-2 lg:mb-3">
+              <h3 className="font-display text-sm sm:text-base lg:text-lg font-bold text-primary-foreground mb-1 sm:mb-2 lg:mb-3">
                 {cat.title}
               </h3>
-              <p className="text-primary-foreground/70 text-xs sm:text-sm 3xl:text-base leading-relaxed hidden sm:block">
+              <p className="text-primary-foreground/70 text-xs sm:text-sm leading-relaxed hidden sm:block">
                 {cat.description}
               </p>
             </motion.div>
@@ -108,7 +108,7 @@ const Products = () => {
             href="https://wa.me/5549999739747?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Ancora%20Distribuidora."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-accent text-accent-foreground px-6 sm:px-8 3xl:px-10 py-3 sm:py-4 3xl:py-5 rounded-lg font-semibold text-base sm:text-lg 3xl:text-xl shadow-lg transition-shadow hover:shadow-xl"
+            className="inline-block bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg transition-shadow hover:shadow-xl"
           >
             Solicite nosso catálogo
           </motion.a>
