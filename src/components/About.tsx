@@ -31,7 +31,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.5 }}
             custom={0}
             variants={fadeInUp}
-            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mb-3 sm:mb-4 text-primary-foreground font-extrabold">
+            className="font-display sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4 lg:text-6xl font-extrabold text-gray-950 text-5xl">
 
             Sobre nós
           </motion.h2>
@@ -76,7 +76,7 @@ const About = () => {
               custom={i}
               variants={fadeInUp}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 text-center hover:shadow-lg transition-shadow border border-border/50 last:sm:col-span-2 last:md:col-span-1 last:sm:max-w-sm last:sm:mx-auto last:md:max-w-none">
+              className="bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 text-center hover:shadow-lg transition-shadow border border-border/50 last:sm:col-span-2 last:md:col-span-1 last:sm:max-w-sm last:sm:mx-auto last:md:max-w-none">
 
                 <motion.div
                 whileHover={{ rotate: 360 }}
