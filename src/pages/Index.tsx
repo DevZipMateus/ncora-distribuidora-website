@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -20,7 +19,7 @@ const Index = () => {
             style={{ height: "clamp(600px, 85vw, 1400px)" }}
           />
         </section>
-        <About />
+        
         <Products />
         <Contact />
       </main>
