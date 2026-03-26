@@ -17,7 +17,7 @@ const Index = () => {
             src="https://ancoradistribuidora.egestor.com.br/vitrine/"
             title="Vitrine Âncora Distribuidora"
             className="w-full border-none"
-            style={{ height: "clamp(350px, 55vw, 900px)" }}
+            style={{ height: "clamp(600px, 85vw, 1400px)" }}
           />
         </section>
         <About />
