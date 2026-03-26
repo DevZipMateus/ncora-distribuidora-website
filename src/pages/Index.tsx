@@ -19,7 +19,7 @@ const Index = () => {
             style={{ height: "clamp(600px, 85vw, 1400px)" }}
           />
         </section>
-        
+        {/* Products section */}
         <Products />
         <Contact />
       </main>
