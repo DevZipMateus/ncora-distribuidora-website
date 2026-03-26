@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -15,12 +14,12 @@ const Index = () => {
         <section className="w-full">
           <iframe
             src="https://ancoradistribuidora.egestor.com.br/vitrine/"
-            title="Vitrine Ancora Distribuidora"
+            title="Vitrine Âncora Distribuidora"
             className="w-full border-none"
-            style={{ height: "clamp(350px, 55vw, 900px)" }}
+            style={{ height: "3000px" }}
+            scrolling="no"
           />
         </section>
-        <About />
         <Products />
         <Contact />
       </main>

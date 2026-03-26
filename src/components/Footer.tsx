@@ -53,7 +53,7 @@ const Footer = () => {
 
           <div className="border-t border-primary-foreground/20 w-full max-w-lg pt-4 text-center">
             <p className="text-primary-foreground/60 text-xs sm:text-sm">
-              Ancora Distribuidora © {new Date().getFullYear()} — Todos os direitos reservados.
+              Âncora Distribuidora © {new Date().getFullYear()} — Todos os direitos reservados.
             </p>
           </div>
         </div>

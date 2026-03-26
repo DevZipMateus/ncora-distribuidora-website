@@ -105,7 +105,7 @@ const Products = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            href="https://wa.me/5549999739747?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Ancora%20Distribuidora."
+            href="https://wa.me/5549999739747?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Âncora%20Distribuidora."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg transition-shadow hover:shadow-xl"

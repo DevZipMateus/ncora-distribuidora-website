@@ -12,7 +12,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed"
         style={{ backgroundImage: `url(${heroBg})` }}
         role="img"
-        aria-label="Depósito de materiais escolares e papelaria da Ancora Distribuidora" />
+        aria-label="Depósito de materiais escolares e papelaria da Âncora Distribuidora" />
 
       <div className="absolute inset-0 bg-primary/80" />
 
