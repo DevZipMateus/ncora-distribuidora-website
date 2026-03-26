@@ -13,7 +13,7 @@ const Footer = () => {
         className="container mx-auto"
       >
         <div className="flex flex-col items-center gap-6 sm:gap-8">
-          <img src={logo} alt="Logo Ancora Distribuidora" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain brightness-0 invert" />
+          <img src={logo} alt="Logo Âncora Distribuidora" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain brightness-0 invert" />
 
           <div className="flex items-center gap-4">
             <a
@@ -53,7 +53,7 @@ const Footer = () => {
 
           <div className="border-t border-primary-foreground/20 w-full max-w-lg pt-4 text-center">
             <p className="text-primary-foreground/60 text-xs sm:text-sm">
-              Ancora Distribuidora © {new Date().getFullYear()} — Todos os direitos reservados.
+              Âncora Distribuidora © {new Date().getFullYear()} — Todos os direitos reservados.
             </p>
           </div>
         </div>

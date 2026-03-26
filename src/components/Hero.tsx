@@ -12,7 +12,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed"
         style={{ backgroundImage: `url(${heroBg})` }}
         role="img"
-        aria-label="Depósito de materiais escolares e papelaria da Ancora Distribuidora" />
+        aria-label="Depósito de materiais escolares e papelaria da Âncora Distribuidora" />
 
       <div className="absolute inset-0 bg-primary/80" />
 
@@ -48,7 +48,7 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-primary-foreground mb-4 sm:mb-6">
 
-          Ancora Distribuidora
+          Âncora Distribuidora
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
